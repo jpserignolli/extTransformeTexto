@@ -28,4 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
         
         resultado.innerHTML = resultadoFinal.join(" ");
     });
+
+    document.getElementById("btnLimpar").addEventListener("click", function () {
+        input.value = "";        
+        resultado.innerHTML = ""; 
+    });    
 });
