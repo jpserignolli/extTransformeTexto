@@ -1,45 +1,110 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 
-  font-family: "Ubuntu", sans-serif;
-  font-size: 12px;
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: "Ubuntu", sans-serif; }
 
-  border: solid 1px;
-}
-
-.container {
-  width: 200px;
-  height: 200px;
-
+.container{
+  width: 180px;
+  padding: 8px;
+  background: #fff;
+  border: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 6px;
+  align-items: stretch;
 }
 
-.input-text {
-  width: 160px;
-  padding: 1px 3px;
-  outline: none;
-}
 
-.container-button {
-  width: 160px;
-  padding: 5px 0px;
-
+.header{
   display: flex;
-  justify-content: space-around;
-
+  align-items: center;
+  gap: 6px;
 }
 
+
+.logo{
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  border-radius: 3px;
+  border: 1px solid #000;
+  background: #000; 
+  display: block;
+}
+
+
+.title{
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  font-size: 12px;
+  line-height: 1;
+  user-select: none;
+}
+.title-strong{ font-weight: 700; color: #000; letter-spacing: 0.2px; }
+.title-light{ font-weight: 400; color: #000; }
+
+
+.input-text{
+  width: 100%;
+  height: 22px;
+  padding: 3px 6px;
+  font-size: 12px;
+  border: 1px solid #9b9b9b;
+  background: #fff;
+  border-radius: 2px;
+  color: #222;
+}
+
+
+.container-button{
+  display: flex;
+  gap: 6px;
+}
 .btn{
-    width: 77px;
-    padding: 2px ;
-    border-radius: 3px;
-    border: solid 1px #4c4c4d;
-    cursor: pointer;
+  width: 84px; 
+  height: 22px;
+  padding: 0 6px;
+  font-size: 12px;
+  border-radius: 2px;
+  border: 1px solid #9b9b9b;
+  background: #f2f2f2;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 
+.resultado{
+  width: 100%;
+  min-height: 68px;
+  padding: 6px;
+  font-size: 12px;
+  color: #444;
+  border: 1px solid #9b9b9b;
+  border-radius: 2px;
+  background: #fff;
+  white-space: pre-wrap;
+  overflow-y: auto;
+}
+
+
+.footer-note{
+  text-align: center;
+  font-size: 11px;
+  color: #000;
+  margin-top: 2px;
+}
+.footer-note a{
+  display: block;
+  color: #0642ff;
+  text-decoration: underline;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+
+.input-text:focus, .btn:focus { outline: 2px solid rgba(0,120,255,0.12); }
+
+
+@media (max-width: 170px){
+  .container{ width: 160px; }
+  .btn{ width: 76px; }
+}
