@@ -32,5 +32,20 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("btnLimpar").addEventListener("click", function () {
         input.value = "";        
         resultado.innerHTML = ""; 
+    });
+    
+    document.getElementById("btnMontanha").addEventListener("click", function () {
+        let texto = input.value.toLowerCase();
+        let resultadoMontanha = "";
+
+        for (let i = 0; i < texto.length; i++) {
+            if (i % 2 === 0) {
+                resultadoMontanha += texto[i].toLowerCase(); 
+            } else {
+                resultadoMontanha += texto[i].toUpperCase(); 
+            }
+        }
+
+        resultado.innerHTML = resultadoMontanha;
     });    
 });
